@@ -24,29 +24,30 @@ public class Calculator
 			//c.toString();
 		}
 		//catch(ArithmeticException e)
-		/*catch(ArithmeticException | ArrayIndexOutOfBoundsException e)
+		catch(ArithmeticException | ArrayIndexOutOfBoundsException e)
 		{
 			e.printStackTrace();
 		}
 		/*catch(ArrayIndexOutOfBoundsException e)
 		{
 			e.printStackTrace();
-		}
+		}*/
 		System.out.println("Done");
 
-	}*/
-		/*catch(Exception e)
+
+		catch(Exception e)
 		{
 			e.printStackTrace();
-		}*/
-		
-		finally
+		}
+	
+		/*finally
 		{
 			System.out.println("Finally block is executed irrespective of any exception");
 			System.out.println("Done");
 			sc.close();
-		}
+		}*/
 		
 		}
-
 }
+
+
