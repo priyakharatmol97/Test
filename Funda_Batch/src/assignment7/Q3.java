@@ -58,7 +58,7 @@ public class Q3
 				}
 			}
 			
-			System.out.println("The sum of Lower Triangle Matrix:"+sum);
+			System.out.println("The sum of Upper Triangle Matrix:"+sum);
 			System.out.println(" ");
 			
 		}

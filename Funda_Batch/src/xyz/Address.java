@@ -1,12 +1,17 @@
-package assignment4;
+package xyz;
 
-import gettersetter.Student;
-
-public class Address
+public class Address 
 {
-	String city,state,country;
-	Person p;
+	String street,city,state,country;
 	
+	public void setStreet(String street)
+	{
+		this.street=street;
+	}
+	public String getStreet()
+	{
+		return street;
+	}
 	
 	public void setCity(String city)
 	{
@@ -26,7 +31,6 @@ public class Address
 		return state;
 	}
 	
-	
 	public void setCountry(String country)
 	{
 		this.country=country;
@@ -36,19 +40,10 @@ public class Address
 		return country;
 	}
 	
-	public void setPerson(Person p)
-	{
-		this.p=p;
-	}
-	public Person getPerson()
-	{
-		return p;
-	}
-	
-	
 	public String toString()
 	{
-		return city+" "+state+" "+country+" "+p;
+		return street+" "+city+" "+state+" "+country;
 	}
+	
 
 }
