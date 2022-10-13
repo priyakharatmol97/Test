@@ -14,7 +14,7 @@ public class DSMain {
 			s[4]=new Student();
 			
 			
-			s[0]=setId(1);
+			//s[0]=setId(1);
 		}
 		
 		

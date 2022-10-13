@@ -24,7 +24,7 @@ public class Department
 		return name;
 	}
 	
-	public Student 
+	
 	
 	
 

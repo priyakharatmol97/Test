@@ -32,4 +32,16 @@ public class ABC extends ABCMainBranch implements Transport,College
 		System.out.println("Ananya Transport Will be Available");
 	}
 
+	@Override
+	public void transportFacility() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void vehicle() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

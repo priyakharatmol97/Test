@@ -12,7 +12,7 @@ public class EvenNumber {
 		int i=121;
 		System.out.println("Even Numbers");
 		
-		while(i<=num)
+		while(i!=num)
 		{
 			System.out.print(i+" ");
 			i=i+2;
