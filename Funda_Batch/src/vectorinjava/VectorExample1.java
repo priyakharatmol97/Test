@@ -1,5 +1,6 @@
 package vectorinjava;
 
+import java.util.Collections;
 import java.util.Enumeration;
 import java.util.Vector;
 
@@ -57,8 +58,18 @@ public class VectorExample1 {
 		System.out.println(en.nextElement());
 		System.out.println(en.nextElement());
 		
+		Collections.reverse(v);
+		System.out.println(v);
+		
+		Collections.sort(v);
+		System.out.println(v);
+		
+		
+		System.out.println(v.indexOf(3));
+		
 		
 		break;
+		
 	}
 
 	}
