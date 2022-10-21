@@ -1,8 +1,5 @@
 package project2;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class Book 
 {
 	int id,price;
@@ -19,5 +16,7 @@ public class Book
 	{
 		return id+" "+name+" "+price;
 	}
+
+	
 }
 

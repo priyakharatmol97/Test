@@ -1,5 +1,4 @@
 package project2;
-import java.io.*;
 import java.util.*;
 
 
@@ -8,7 +7,7 @@ public class BookMain
 	
 		static void addBook(ArrayList<Book> al,Scanner sc)
 		{
-			char ch=' ';
+			String s=" ";
 			do
 			{
 			System.out.println("Enter book id");
@@ -22,30 +21,33 @@ public class BookMain
 			
 			Book b=new Book(book_Id,book_Name,book_Price);
 			System.out.println("Book Added");
+			String st=sc.next();
+			if(st.equalsIgnoreCase("Yes"))
+			{
+				viewBook(al,sc);
+			}
 			System.out.println("You want Add More Books");
 			System.out.println("Y or N" );
-			ch=sc.next().charAt(0);
-			if(ch=='N')
-			{
-				break;
-			}
-		}while(ch=='Y');
+			s=sc.next();
+			
+		}while(s.equalsIgnoreCase("Yes"));
 		}
 		
 	static void removeBook(ArrayList<Book> al,Scanner sc)
 	{
-		char ch=' ';
+		String s=" ";
 		do
 		{
 			int count=0;
-			int size=al.size();
+			int length=al.size();
 			System.out.println("Which One Book You Want to Remove");
 			
-			String book_Name1=sc.next();
+			
 			
 			Iterator<Book> itr=al.iterator();
 			while(itr.hasNext())
 			{
+				String book_Name1=sc.next();
 		        if(itr.next().name.equals(book_Name1))
 		        {
 		        	itr.remove();
@@ -56,24 +58,26 @@ public class BookMain
 					count++;
 				}
 			}
-			if(count>(size-1))
+			if(count>(length-1))
 			{
 				System.out.println("Sorry book not present");
 			}
 			System.out.println("You want to Remove Another Books");
+
 			System.out.println("Y or N" );
-			ch=sc.next().charAt(0);
-		}while(ch=='Y');
+			s=sc.next();
+			
+		}while(s.equalsIgnoreCase("Yes"));
 	}
 		
 	static void updateBook(ArrayList<Book> al,Scanner sc)
 	{ 
-		char ch=' ';
+		String s=" ";
 		do
 		{
 			int index=0;
 			int count=0;
-			int size=al.size();
+			int length=al.size();
 			System.out.println("Which One Book You Want to Update");
 			
 			Object book_Name1=sc.next();
@@ -93,20 +97,19 @@ public class BookMain
 					count++;
 				}
 			}
-			if(count>(size-1))
+			if(count>(length-1))
 			{
 				System.out.println("Sorry book not present");
 			}
 			System.out.println("You want to Remove Another Books");
 			System.out.println("Y or N" );
-			ch=sc.next().charAt(0);
-		}while(ch=='Y');
+			s=sc.next();
+			
+		}while(s.equalsIgnoreCase("Yes"));
 	}
 	
 	static void viewBook(ArrayList<Book> al,Scanner sc)
 	{
-		String ch;
-		
 		Iterator<Book> itr=al.iterator();
 		while(itr.hasNext())
 		{
@@ -114,16 +117,10 @@ public class BookMain
 		}
 	}
 	
-	static void sortBook(ArrayList<Book> al,Scanner sc)
-	{
-		String ch;
-		
-		//Collections.sort(al);
-		for(Book book_id:al)
-		{
-			System.out.println(book_id);
-		}
-	}
+	
+	
+
+	
 
 			
 		
@@ -147,6 +144,7 @@ public class BookMain
 			
 			System.out.println(al);
 			
+			
 			Scanner sc=new Scanner(System.in);
 			
 			System.out.println("--------Book List Operations--------");
@@ -160,6 +158,8 @@ public class BookMain
 			
 			System.out.println("Please Choice Which Operation r u Performing");
 			int choice=sc.nextInt();
+			
+			
 			
 			switch(choice)
 			{
@@ -175,9 +175,10 @@ public class BookMain
 	                
 	                
 			case 4: viewBook(al,sc);
-	        break;
+	                break;
 	                
-	             
+	                
+			
 			
 			
 			
@@ -188,4 +189,5 @@ public class BookMain
 	
 		}
 
+		
 }
